@@ -1,0 +1,63 @@
+import React from 'react';
+import { UtensilsCrossed, Heart } from 'lucide-react';
+
+export default function Footer() {
+  return (
+    <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          
+          {/* Brand */}
+          <div className="md:col-span-2 space-y-3">
+            <div className="flex items-center space-x-2">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-emerald-400 flex items-center justify-center text-white font-bold">
+                <UtensilsCrossed className="w-5 h-5" />
+              </div>
+              <span className="text-xl font-extrabold text-white tracking-tight">
+                PrecificaFit
+              </span>
+            </div>
+            <p className="text-xs leading-relaxed max-w-sm text-slate-400">
+              A ferramenta inteligente de formação de preços para marmitas fitness, saudáveis e marmitas congeladas. Calcule custos reais de ingredientes por estado brasileiro, taxas de entrega e lucro projetado.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-2">
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Recursos</h4>
+            <ul className="space-y-1.5 text-xs">
+              <li><a href="#calculator" className="hover:text-emerald-400 transition-colors">Calculadora de Marmita Fit</a></li>
+              <li><a href="#results" className="hover:text-emerald-400 transition-colors">Semáforo de Mercado Regional</a></li>
+              <li><a href="#calculator" className="hover:text-emerald-400 transition-colors">Simulador de Cenários</a></li>
+              <li><a href="#calculator" className="hover:text-emerald-400 transition-colors">Ficha Técnica em PDF & Excel</a></li>
+            </ul>
+          </div>
+
+          {/* SEO Tag Cloud */}
+          <div className="space-y-2">
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Tópicos Otimizados</h4>
+            <div className="flex flex-wrap gap-1.5 text-[11px]">
+              <span className="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Precificação de marmitas fit</span>
+              <span className="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Quanto cobrar por marmita fitness</span>
+              <span className="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Calculadora de marmita fit</span>
+              <span className="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Formação de preço para marmitas</span>
+              <span className="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Lucro em marmitas saudáveis</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+          <p>© {new Date().getFullYear()} PrecificaFit. Plataforma de Precificação para Microempreendedores da Alimentação Saudável.</p>
+          <p className="flex items-center space-x-1 mt-2 sm:mt-0">
+            <span>Desenvolvido com</span>
+            <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
+            <span>para impulsionar seu negócio fit.</span>
+          </p>
+        </div>
+
+      </div>
+    </footer>
+  );
+}
