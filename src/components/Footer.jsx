@@ -1,11 +1,28 @@
 import React from 'react';
-import { UtensilsCrossed, Heart } from 'lucide-react';
+import { UtensilsCrossed, Heart, GraduationCap } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
+        {/* Course Credits Banner */}
+        <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+          <div className="flex items-center space-x-3">
+            <div className="p-2 rounded-xl bg-emerald-500/20 text-emerald-400">
+              <GraduationCap className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="font-bold text-white text-sm">Código Sem Fronteiras</h4>
+              <p className="text-slate-400">Desenvolvimento Web com IA • Instrutor: <strong>Eliakim Rocha</strong></p>
+            </div>
+          </div>
+
+          <span className="px-3 py-1 rounded-full bg-emerald-950 text-emerald-300 font-bold border border-emerald-800 text-[11px]">
+            Data: 15/08/2026
+          </span>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
           {/* Brand */}
@@ -49,7 +66,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} PrecificaFit. Plataforma de Precificação para Microempreendedores da Alimentação Saudável.</p>
+          <p>© {new Date().getFullYear()} PrecificaFit. Código Sem Fronteiras • Desenvolvimento Web com IA.</p>
           <p className="flex items-center space-x-1 mt-2 sm:mt-0">
             <span>Desenvolvido com</span>
             <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
